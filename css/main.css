@@ -1,0 +1,393 @@
+html, body {
+  background: #ECECEC;
+  height: 100%;
+  font-family: aktiv-grotesk;
+  display: flex;
+  flex-direction: column;
+}
+
+/* centres element to the document */
+.te-padding {
+    margin:  128px 0;
+}
+
+.notification {
+    margin-bottom: 0 !important;
+    text-align: center;
+
+
+position: fixed;
+
+    width: 100%;
+    z-index: 200;
+    top: -64px;
+
+}
+
+.notification > .delete{
+    top: 0;
+}
+
+.te-push {
+  flex: 1;
+}
+
+
+.navbar-menu {
+  background: transparent;
+  box-shadow: none;
+}
+
+.te-rounded {
+  border-radius: 8px;
+}
+
+.te-bottom {margin-top: 32px;}
+
+/* sticky nav */
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+  transition: 0.5s;
+  background: rgba(235, 235, 235, .8);
+  color: rgb(235, 235, 235);
+}
+
+.non-sticky {
+  background: rgba(25, 25, 25, 1);
+  transition: 0.5s;
+}
+
+
+#sticky-nav {
+    height: 48px;
+    padding: 0 16px;
+}
+
+.sticky-link:hover {
+    background: transparent;
+}
+
+.sticky-link {
+    transition: 0.5s;
+    color: rgb(235, 235, 235);
+    margin-right: 16px;
+    line-height: 48px;
+}
+
+
+.divide-1 {
+  background: url("../assets/chinese-calligraphy.jpg") fixed no-repeat;
+  background-size: cover;
+  min-height: 256px;
+}
+
+.divide-2 {
+  background: url("../assets/moveable-type.jpg") fixed no-repeat;
+  background-size: cover;
+  height: 256px;
+}
+
+.divide-3 {
+  height: 512px;
+}
+
+#navbar {
+  background: rgba(25, 25, 25, 1);
+  padding: 1.25rem;
+}
+
+#nms-logo {
+  width: 256px;
+}
+
+#hero {
+  background: rgb(25, 25, 25);
+}
+
+#hero-title {
+  font-size: 56px;
+  color: rgb(235, 235, 235);
+}
+
+#hero-subtitle {
+  font-size: 40px;
+  color: rgb(235, 235, 235);
+}
+
+#hero-subtitle:after {
+  content: "_";
+  animation: blink 1s linear 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    color: rgba(235, 235, 235, 0);
+  }
+
+  50% {
+    color: rgba(235, 235, 235, 0);
+  }
+
+  51% {
+    color: rgba(235, 235, 235, 1);
+  }
+
+  100% {
+    color: rgba(235, 235, 235, 1);
+  }
+}
+
+.te-footer {
+  background: rgb(25, 25, 25);
+  color: rgb(235, 235, 235);
+}
+
+/* reviews */
+.review.title::before, .review.title::after {
+  content: '"';
+}
+
+.review.subtitle::before, .review.subtitle::after {
+  content: '"';
+}
+
+/*-------- FORM --------*/
+.te-form {
+  border-radius: 8px;
+  width: 32rem;
+    margin: auto;
+}
+
+.card {
+    height: 100%;
+}
+
+
+.te-formtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+textarea {
+  resize: none !important;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+}
+
+.valid {
+  color: green;
+}
+
+/*-------- LOGO --------*/
+.logo {
+  height: 64px;
+}
+
+/*--------MAP API--------*/
+#map {
+  height: 100%;
+}
+
+/*--------STAR RATING--------*/
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+.rating input {
+  display: none;
+  cursor: pointer;
+}
+
+.stars i {
+  color: rgb(255, 185, 0);
+}
+
+.rating .te-star:before {
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+  content: "\f005";
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.rating .te-star {
+  color: #D0D0D0 !important;
+  display: flex !important;
+  margin: 0 !important;
+  width: 32px;
+}
+
+/* changes character on checked */
+.rating input:checked~.te-star:before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f005';
+  font-weight: bold;
+}
+
+/* changes colour on checked and hover */
+.rating input:checked~.te-star:before, .rating:not(:checked)>.te-star:hover, .rating:not(:checked)>.te-star:hover~.te-star:before, .te-star:hover .te-star {
+  color: rgb(255, 185, 0);
+}
+
+/*-------- CAROUSEL --------*/
+.slick-dots {
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    right: 24px;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    text-align: center;
+}
+
+.slick-dots li {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    transition: 0.5s;
+    margin: 0;
+}
+
+
+.slick-dots .slick-active {
+    width: 96px;
+    background: rgba(25, 25, 25, .8);
+    transition: 0.5s;
+}
+
+.slick-dots li a {
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.slick-dots .slick-active a {
+    font-weight: bold;
+}
+
+.slick-slide {
+    height: 600px;
+    padding: 48px;
+}
+
+.slide-title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1;
+    transform: translateY(64px);
+    opacity: 0;
+}
+
+.slide-text-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 94px);
+}
+
+.slide-title-animate {
+    transform: translateY(0px);
+    transition: 0.8s;
+    opacity: 1;
+}
+
+.slide-description {
+    font-size: 24px;
+    transform: translateY(96px);
+    line-height: 1.125;
+    opacity: 0;
+}
+
+.slide-description-animate {
+    transform: translateY(16px);
+    transition: 0.8s;
+    opacity: 1;
+}
+
+.slide-1 {
+    background: url("../assets/mac-128k.png") #C9C9A2;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+.slide-2 {
+    background: url("../assets/mac-128k.png") #C9C9A2;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+.slide-3 {
+    background: url("../assets/printing-press.png") center center #BAAD73;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+}
+
+.slide-4 {
+    background: url("../assets/mac-128k.png") right -12px bottom -12px #C9C9A2;
+    background-repeat: no-repeat;
+    background-size: 32%;
+}
+.slide-4 .slide-text-container {
+    width:68%;
+}
+.slide-5 {
+    background: url("../assets/nyc-subway-map.jpg") coral;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: exclusion;
+}
+
+.slide-title-5, .slide-description-5 {
+    color: rgb(235,235,235);
+}
+
+/*-------- MEDIA QUERIES --------*/
+@media only screen and (max-width:600px) {
+    .slick-slide{
+        height: calc(100vh - 48px);
+    }
+
+    .slide-4 {
+        background: url("../assets/mac-128k.png") rgb(0,200,45) center bottom 128px no-repeat;
+        background-size: 75%;
+        background-blend-mode: multiply;
+    }
+
+
+
+    .slide-title-4, .slide-description-4 {
+        color: rgb(235,235,235);
+    }
+    .slide-text-container{
+        width: 100%;
+        height: calc(100% - 48px);
+    }
+
+    .slide-4 .slide-text-container{
+        width: 100%;
+        height: calc(100% - 48px);
+    }
+
+    .slick-dots {
+        flex-direction: row;
+        height: 0;
+        bottom: 24px;
+        right: 0;
+        width: 100%;
+    }
+}
